@@ -12,9 +12,16 @@ const SOURCE = process.env.FX_SOURCE || "banxico_fix";
 // optional: serve a cached result to avoid rate limits and handle outages
 let cache = { asOf: null, usd_mxn_mid: null, stale: true, raw: null };
 
+function parseBanxicoDate(d) {
+  // Banxico gives dd/mm/yyyy, convert to yyyy-mm-dd
+  if (!d || !d.includes("/")) return d;
+  const [day, month, year] = d.split("/");
+  return `${year}-${month}-${day}`;
+}
+
 async function fetchBanxico() {
   const url = `https://www.banxico.org.mx/SieAPIRest/service/v1/series/${SERIES_ID}/datos/oportuno?locale=en`;
-  const headers = { "Accept": "application/json" };
+  const headers = { Accept: "application/json" };
   if (BANXICO_TOKEN) headers["Bmx-Token"] = BANXICO_TOKEN;
 
   const r = await fetch(url, { headers });
@@ -25,19 +32,20 @@ async function fetchBanxico() {
   const serie = j?.bmx?.series?.[0];
   const punto = serie?.datos?.[0];
   const mid = Number(punto?.dato);
-  const fecha = punto?.fecha; // e.g., "2025-09-01"
+  const fecha = parseBanxicoDate(punto?.fecha); // fix here
 
   if (!Number.isFinite(mid) || !fecha) {
     throw new Error("BANXICO_PARSE_ERROR");
   }
-  // Normalize to ISO UTC — treating FIX as mid-afternoon UTC for simplicity
+
+  // Normalize to ISO UTC — treating FIX as ~18:00 UTC
   const asOf = new Date(`${fecha}T18:00:00Z`).toISOString();
 
   cache = {
     asOf,
     usd_mxn_mid: Number(mid.toFixed(4)),
     stale: false,
-    raw: j
+    raw: j,
   };
   return cache;
 }
@@ -46,36 +54,41 @@ function isStale(asOfISO) {
   if (!asOfISO) return true;
   const now = Date.now();
   const asOfMs = Date.parse(asOfISO);
-  return (now - asOfMs) > (24 * 60 * 60 * 1000); // >24h
+  return (now - asOfMs) > 24 * 60 * 60 * 1000; // >24h
 }
 
 // Healthcheck
 app.get("/healthz", (_req, res) => {
-  res.json({ ok: true, source: SOURCE, cached: !!cache.asOf, stale: isStale(cache.asOf) });
+  res.json({
+    ok: true,
+    source: SOURCE,
+    cached: !!cache.asOf,
+    stale: isStale(cache.asOf),
+  });
 });
 
 // Miami FX placeholder schema
 app.get("/fx/usd-mxn/latest", async (_req, res) => {
   try {
-    // refresh cache if empty or older than 1h (configurable)
     const MAX_CACHE_MS = Number(process.env.MAX_CACHE_MS || 60 * 60 * 1000);
-    const needsRefresh = !cache.asOf || (Date.now() - Date.parse(cache.asOf)) > MAX_CACHE_MS;
+    const needsRefresh =
+      !cache.asOf || Date.now() - Date.parse(cache.asOf) > MAX_CACHE_MS;
 
     if (needsRefresh) {
       await fetchBanxico();
     }
 
     const stale = isStale(cache.asOf);
-    // If stale, you can either 200 with stale:true and let Miami decline, or 409. We return 200 + stale flag.
     res.json({
       asOf: cache.asOf,
       usd_mxn_mid: cache.usd_mxn_mid,
       buy_spread_bps: BUY_SPREAD_BPS,
       sell_spread_bps: SELL_SPREAD_BPS,
       source: SOURCE,
-      stale
+      stale,
     });
   } catch (e) {
+    console.error("FX endpoint error:", e);
     res.status(502).json({ error: String(e.message || e) });
   }
 });
