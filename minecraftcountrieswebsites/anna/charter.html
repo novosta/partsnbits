@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="description" content="Official Charter of the Anarchy Network Naming Authority - Governing Document for .nvos.dev Administration">
+    <meta name="author" content="ANNA">
+    <!-- NOTE: This is a fictional website for a Minecraft server. Not affiliated with any real government or UN organization. -->
+    <title>ANNA Charter - Anarchy Network Naming Authority</title>
+    
+    <!-- Security/SEO Headers (implement server-side):
+         X-Robots-Tag: noindex, nofollow
+         Content-Security-Policy: default-src 'self'; style-src 'unsafe-inline'; font-src 'self'
+         X-Content-Type-Options: nosniff
+         X-Frame-Options: DENY
+    -->
+    
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Self-hosted Inter font */
+        @font-face {
+            font-family: "Inter";
+            src: url("/fonts/Inter-Variable.woff2") format("woff2-variations");
+            font-weight: 100 900;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "Inter";
+            src: url("/fonts/Inter-Regular.woff2") format("woff2");
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "Inter";
+            src: url("/fonts/Inter-SemiBold.woff2") format("woff2");
+            font-weight: 600;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        body {
+            font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+            font-size: 15px;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        /* Government Banner */
+        .gov-banner {
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #ddd;
+            padding: 8px 0;
+            font-size: 13px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .gov-banner:hover {
+            background-color: #e8e8e8;
+        }
+
+        .gov-banner-content {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .gov-banner-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .gov-flag {
+            width: 20px;
+            height: 13px;
+            background: #4a90e2;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gov-flag::before {
+            content: '🌍';
+            font-size: 10px;
+            color: white;
+        }
+
+        .gov-text {
+            color: #666;
+        }
+
+        .gov-link {
+            color: #0066cc;
+            text-decoration: underline;
+        }
+
+        .gov-link::after {
+            content: ' ⌄';
+            font-size: 11px;
+        }
+
+        /* Expanded details */
+        .gov-details {
+            display: none;
+            background-color: #f8f8f8;
+            border-top: 1px solid #ddd;
+            padding: 15px 0;
+        }
+
+        .gov-details.expanded {
+            display: block;
+        }
+
+        .gov-details-content {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .gov-detail-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .gov-icon {
+            width: 24px;
+            height: 24px;
+            background-color: #2c4b77;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 12px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .gov-detail-text {
+            font-size: 12px;
+            line-height: 1.4;
+        }
+
+        .gov-detail-text strong {
+            display: block;
+            margin-bottom: 3px;
+            color: #333;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(to bottom, #2c4b77, #1f3555);
+            color: white;
+            padding: 20px;
+            position: relative;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-text h1 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .header-text .motto {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .seal {
+            width: 64px;
+            height: 64px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            text-align: center;
+            line-height: 1.2;
+        }
+
+        /* Navigation */
+        .nav {
+            background-color: #e6e6e6;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav li {
+            border-right: 1px solid #ccc;
+        }
+
+        .nav li:last-child {
+            border-right: none;
+        }
+
+        .nav a {
+            display: block;
+            padding: 12px 20px;
+            color: #1f3555;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+
+        .nav a:hover {
+            background-color: #d0d0d0;
+        }
+
+        .nav .active {
+            background-color: white;
+            font-weight: 600;
+        }
+
+        /* Document Container */
+        .document {
+            padding: 40px;
+            background-color: #fafafa;
+            border: 1px solid #ddd;
+            margin: 30px;
+        }
+
+        /* Document Header */
+        .doc-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px double #1f3555;
+        }
+
+        .doc-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1f3555;
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+        }
+
+        .doc-subtitle {
+            font-size: 16px;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+
+        .doc-divider {
+            margin: 20px 0;
+            text-align: center;
+            color: #999;
+            font-size: 14px;
+        }
+
+        /* Preamble */
+        .preamble {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 40px;
+            padding: 25px;
+            background-color: #f8f9fa;
+            border-left: 4px solid #2c4b77;
+            font-style: italic;
+        }
+
+        /* Articles */
+        .article {
+            margin-bottom: 40px;
+        }
+
+        .article-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: #1f3555;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #2c4b77;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2c4b77;
+            margin-bottom: 12px;
+        }
+
+        .section-content {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .section-content p {
+            margin-bottom: 12px;
+        }
+
+        /* Lists */
+        .section-content ul {
+            margin: 12px 0;
+            padding-left: 25px;
+        }
+
+        .section-content li {
+            margin-bottom: 8px;
+        }
+
+        /* Emphasis */
+        strong {
+            color: #1f3555;
+            font-weight: 600;
+        }
+
+        /* Signature Block */
+        .signature {
+            margin-top: 50px;
+            text-align: center;
+            font-style: italic;
+            color: #666;
+            border-top: 1px solid #ccc;
+            padding-top: 30px;
+        }
+
+        .signature .org-name {
+            font-weight: 600;
+            color: #1f3555;
+            margin-top: 10px;
+        }
+
+        .signature .org-mission {
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #f0f0f0;
+            border-top: 1px solid #ccc;
+            padding: 15px 30px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            .container {
+                margin: 0 10px;
+                max-width: calc(100% - 20px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .nav ul {
+                flex-wrap: wrap;
+            }
+
+            .nav li {
+                flex: 1;
+                min-width: 120px;
+                border-right: none;
+                border-bottom: 1px solid #ccc;
+            }
+
+            .gov-banner-content {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+
+            .gov-details-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .gov-detail-item {
+                min-width: auto;
+            }
+
+            .document {
+                margin: 15px;
+                padding: 25px;
+            }
+
+            .doc-title {
+                font-size: 24px;
+            }
+
+            .article-title {
+                font-size: 20px;
+            }
+        }
+    </style>
+    
+    <script>
+        function toggleGovDetails() {
+            const details = document.getElementById('govDetails');
+            details.classList.toggle('expanded');
+        }
+    </script>
+</head>
+<body>
+    <!-- Government Banner -->
+    <div class="gov-banner" onclick="toggleGovDetails()">
+        <div class="gov-banner-content">
+            <div class="gov-banner-left">
+                <div class="gov-flag"></div>
+                <span class="gov-text">An official website of the United Nations</span>
+                <span class="gov-link">Here's how you know</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="gov-details" id="govDetails">
+        <div class="gov-details-content">
+            <div class="gov-detail-item">
+                <div class="gov-icon">🌐</div>
+                <div class="gov-detail-text">
+                    <strong>Official websites use *.int.nvos.dev</strong>
+                    A *.int.nvos.dev website belongs to an official UN organization.
+                </div>
+            </div>
+            <div class="gov-detail-item">
+                <div class="gov-icon">🔒</div>
+                <div class="gov-detail-text">
+                    <strong>Secure .gov websites use HTTPS</strong>
+                    A lock (🔒) or https:// means you've safely connected to the .gov website.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="header-text">
+                    <h1>Anarchy Network Naming Authority</h1>
+                    <div class="motto">Neutral Administrator of the .nvos.dev Top-Level Domain</div>
+                </div>
+                <div class="seal">
+                    ANNA<br>SEAL
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="charter.html" class="active">Charter</a></li>
+                <li><a href="applications.html">Applications</a></li>
+                <li><a href="security.html">Security</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Charter Document -->
+        <div class="document">
+            <div class="doc-header">
+                <h1 class="doc-title">Charter of the Anarchy Network Naming Authority (ANNA)</h1>
+                <div class="doc-subtitle">Established under the .nvos.dev Root Domain System</div>
+                <div class="doc-divider">─────</div>
+            </div>
+
+            <div class="preamble">
+                We, the founding members of the global community served by the .nvos.dev namespace, recognizing the fundamental importance of a stable, secure, and universally accessible domain name system for international cooperation and digital sovereignty, hereby establish the Anarchy Network Naming Authority (ANNA) as an independent, neutral institution dedicated to the equitable administration of domain registration services. In acknowledgment of the interconnected nature of our digital infrastructure and the need for technical expertise in maintaining global network stability, we commit to the principles of transparency, fairness, and collaborative governance while ensuring the continued security and operational integrity of the root system.
+            </div>
+
+            <article class="article">
+                <h2 class="article-title">Article I: Mission and Purpose</h2>
+                
+                <section class="section">
+                    <h3 class="section-title">Section 1.1 - Primary Mission</h3>
+                    <div class="section-content">
+                        <p>The Anarchy Network Naming Authority (ANNA) shall serve as the neutral administrator of the .nvos.dev top-level domain, ensuring equitable access to domain registration services for all recognized sovereign entities, international organizations, and qualified applicants without discrimination based on political ideology, economic system, or territorial disputes.</p>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h3 class="section-title">Section 1.2 - Core Functions</h3>
+                    <div class="section-content">
+                        <p>ANNA shall:</p>
+                        <ul>
+                            <li>Evaluate and approve applications for second-level domains under .nvos.dev</li>
+                            <li>Maintain the technical infrastructure necessary for global domain resolution</li>
+                            <li>Establish and enforce uniform standards for domain registration and management</li>
+                            <li>Provide dispute resolution mechanisms for domain-related conflicts</li>
+                            <li>Ensure the long-term stability and security of the root namespace</li>
+                        </ul>
+                    </div>
+                </section>
+            </article>
+
+            <article class="article">
+                <h2 class="article-title">Article II: Fundamental Principles</h2>
+                
+                <section class="section">
+                    <h3 class="section-title">Section 2.1 - Neutrality and Non-Interference</h3>
+                    <div class="section-content">
+                        <p>ANNA shall maintain strict political neutrality in all domain registration decisions, treating all applicants equally regardless of their governmental structure, economic policies, or international relations status.</p>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h3 class="section-title">Section 2.2 - Transparency and Accountability</h3>
+                    <div class="section-content">
+                        <p>All policy decisions, registration procedures, and administrative actions shall be conducted with maximum transparency, subject to legitimate security considerations and operational requirements that may necessitate confidential handling of certain technical information.</p>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h3 class="section-title">Section 2.3 - Technical Independence</h3>
+                    <div class="section-content">
+                        <p>ANNA shall maintain full technical autonomy in matters relating to system architecture, security protocols, and infrastructure management, ensuring decisions are made solely on technical merit and operational necessity.</p>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h3 class="section-title">Section 2.4 - Stability and Security</h3>
+                    <div class="section-content">
+                        <p>The paramount obligation of ANNA shall be the preservation of system stability, security, and global accessibility, which may require immediate protective measures when credible threats to infrastructure integrity are identified.</p>
+                    </div>
+                </section>
+            </article>
+
+            <article class="article">
+                <h2 class="article-title">Article III: Governance Structure</h2>
+                
+                <section class="section">
+                    <h3 class="section-title">Section 3.1 - Organizational Independence</h3>
+                    <div class="section-content">
+                        <p>ANNA shall operate as an autonomous institution, with governance structures designed to ensure independence from any single national or political influence while maintaining necessary operational flexibility.</p>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h3 class="section-title">Section 3.2 - Technical Advisory Council</h3>
+                    <div class="section-content">
+                        <p>A Technical Advisory Council, composed of qualified experts in network administration and cybersecurity, shall provide guidance on technical matters. The composition and selection procedures for this Council shall be established through separate implementing regulations, with due consideration for technical expertise and operational requirements.</p>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h3 class="section-title">Section 3.3 - Administrative Authority</h3>
+                    <div class="section-content">
+                        <p>Day-to-day operations shall be managed by an Administrative Authority responsible for implementing policies, processing applications, and maintaining system security. The Administrative Authority shall exercise independent judgment in all matters relating to technical operations and security protocols.</p>
+                    </div>
+                </section>
+            </article>
+
+            <article class="article">
+                <h2 class="article-title">Article IV: Registration Procedures</h2>
+                
+                <section class="section">
+                    <h3 class="section-title">Section 4.1 - Application Process</h3>
+                    <div class="section-content">
+                        <p>Domain registration shall follow standardized procedures designed to ensure fair evaluation while maintaining necessary security screening. All applications shall be reviewed according to established criteria, technical requirements, and security assessments.</p>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h3 class="section-title">Section 4.2 - Evaluation Criteria</h3>
+                    <div class="section-content">
+                        <p>Applications shall be evaluated based on:</p>
+                        <ul>
+                            <li>Legitimacy of the applying entity</li>
+                            <li>Technical capacity to maintain proper domain administration</li>
+                            <li>Compliance with established security protocols</li>
+                            <li>Absence of conflicts with existing registrations or reserved names</li>
+                            <li>Conformity with operational stability requirements</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h3 class="section-title">Section 4.3 - Review Timeline</h3>
+                    <div class="section-content">
+                        <p>ANNA shall endeavor to process applications within reasonable timeframes, though complex applications requiring enhanced security review, technical assessment, or coordination with operational partners may require extended evaluation periods as determined necessary by the Administrative Authority.</p>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h3 class="section-title">Section 4.4 - Appeal Process</h3>
+                    <div class="section-content">
+                        <p>Applicants may request reconsideration of negative decisions through established channels, though final determinations on matters involving technical security, infrastructure stability, or operational requirements shall rest with the Administrative Authority.</p>
+                    </div>
+                </section>
+            </article>
+
+            <article class="article">
+                <h2 class="article-title">Article V: Operational Standards</h2>
+                
+                <section class="section">
+                    <h3 class="section-title">Section 5.1 - Technical Requirements</h3>
+                    <div class="section-content">
+                        <p>All registered domains must comply with established technical standards designed to ensure system-wide compatibility, security, and performance. Non-compliance with technical requirements may result in suspension of services pending remediation.</p>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h3 class="section-title">Section 5.2 - Security Protocols</h3>
+                    <div class="section-content">
+                        <p>ANNA shall maintain comprehensive security protocols to protect against cyber threats, unauthorized access, and system disruption. Implementation of security measures may require temporary restrictions on access or functionality when credible threats are identified.</p>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h3 class="section-title">Section 5.3 - Infrastructure Protection</h3>
+                    <div class="section-content">
+                        <p>The protection of core infrastructure shall take precedence over individual domain services when conflicts arise. ANNA reserves the right to implement protective measures, including temporary service modifications, to preserve overall system integrity.</p>
+                    </div>
+                </section>
+            </article>
+
+            <article class="article">
+                <h2 class="article-title">Article VI: Enforcement and Remedial Actions</h2>
+                
+                <section class="section">
+                    <h3 class="section-title">Section 6.1 - Compliance Monitoring</h3>
+                    <div class="section-content">
+                        <p>ANNA shall conduct regular assessments of domain compliance with established standards, security requirements, and operational protocols. Non-compliance issues shall be addressed through appropriate remedial procedures.</p>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h3 class="section-title">Section 6.2 - Suspension and Revocation</h3>
+                    <div class="section-content">
+                        <p>Domains may be suspended or revoked for:</p>
+                        <ul>
+                            <li>Violation of technical standards or security protocols</li>
+                            <li>Compromise of system security or stability</li>
+                            <li>Use in activities that threaten infrastructure integrity</li>
+                            <li>Failure to maintain compliance with evolving security requirements</li>
+                            <li>Non-cooperation with legitimate security investigations</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h3 class="section-title">Section 6.3 - Emergency Powers</h3>
+                    <div class="section-content">
+                        <p>In circumstances involving imminent threats to system security, public safety, or infrastructure stability, the Administrative Authority may take immediate protective action, including temporary suspension of services, pending full review through established procedures.</p>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h3 class="section-title">Section 6.4 - Due Process</h3>
+                    <div class="section-content">
+                        <p>While ANNA is committed to fair procedures, the exigencies of maintaining global infrastructure security may require expedited processes when delay would compromise system integrity or public safety.</p>
+                    </div>
+                </section>
+            </article>
+
+            <article class="article">
+                <h2 class="article-title">Article VII: Information Management</h2>
+                
+                <section class="section">
+                    <h3 class="section-title">Section 7.1 - Records Maintenance</h3>
+                    <div class="section-content">
+                        <p>ANNA shall maintain comprehensive records of all registration activities, technical operations, and administrative decisions in accordance with established archival standards and operational security requirements.</p>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h3 class="section-title">Section 7.2 - Information Sharing</h3>
+                    <div class="section-content">
+                        <p>While committed to transparency, certain operational information may be classified to protect infrastructure security, ongoing investigations, or competitive technical advantages essential to system stability.</p>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h3 class="section-title">Section 7.3 - Confidentiality Protocols</h3>
+                    <div class="section-content">
+                        <p>Technical details regarding security vulnerabilities, operational procedures, and infrastructure configurations may be subject to confidentiality restrictions when disclosure could compromise system security or operational effectiveness.</p>
+                    </div>
+                </section>
+            </article>
+
+            <article class="article">
+                <h2 class="article-title">Article VIII: Amendment and Interpretation</h2>
+                
+                <section class="section">
+                    <h3 class="section-title">Section 8.1 - Charter Amendments</h3>
+                    <div class="section-content">
+                        <p>This Charter may be amended through procedures that ensure broad consultation while maintaining operational continuity and security. Amendments affecting technical operations or security protocols may be expedited when necessary for infrastructure protection.</p>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h3 class="section-title">Section 8.2 - Interpretation Authority</h3>
+                    <div class="section-content">
+                        <p>Questions of Charter interpretation, particularly regarding technical requirements and security protocols, shall be resolved by the Administrative Authority in consultation with the Technical Advisory Council, with decisions guided by the paramount importance of system stability and security.</p>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h3 class="section-title">Section 8.3 - Operational Flexibility</h3>
+                    <div class="section-content">
+                        <p>This Charter shall be interpreted to provide necessary operational flexibility for ANNA to fulfill its technical mission and security responsibilities, recognizing that rigid procedures may conflict with the dynamic requirements of infrastructure management.</p>
+                    </div>
+                </section>
+            </article>
+
+            <article class="article">
+                <h2 class="article-title">Article IX: Final Provisions</h2>
+                
+                <section class="section">
+                    <h3 class="section-title">Section 9.1 - Effective Date</h3>
+                    <div class="section-content">
+                        <p>This Charter shall take effect immediately upon adoption and shall govern all operations of ANNA under the .nvos.dev namespace.</p>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h3 class="section-title">Section 9.2 - Continuity of Operations</h3>
+                    <div class="section-content">
+                        <p>ANNA shall ensure uninterrupted service delivery during any transitional periods, organizational changes, or emergency situations, with operational continuity taking precedence over administrative procedures when conflicts arise.</p>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h3 class="section-title">Section 9.3 - International Cooperation</h3>
+                    <div class="section-content">
+                        <p>ANNA shall maintain cooperative relationships with all legitimate stakeholders while preserving its technical independence and security responsibilities.</p>
+                    </div>
+                </section>
+            </article>
+
+            <div class="signature">
+                <div class="doc-divider">─────</div>
+                <p><strong>Adopted this day in the interest of global digital cooperation and technical stability</strong></p>
+                <div class="org-name">Anarchy Network Naming Authority</div>
+                <div class="org-mission">Serving the .nvos.dev Community</div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            © ANNA • Last updated: 2025-09-15 • Not indexed.<br>
+            <small style="color: #999; margin-top: 5px; display: block;">
+                This is a fictional website created for a Minecraft server. Not affiliated with any real government or UN organization.
+            </small>
+        </footer>
+    </div>
+</body>
+</html>
