@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="description" content="Anarchy Network Naming Authority - Ensuring Stability, Security, and Neutrality in the nvos.dev Root">
+    <meta name="author" content="ANNA">
+    <!-- NOTE: This is a fictional website for a Minecraft server. Not affiliated with any real government or UN organization. -->
+    <title>ANNA - Anarchy Network Naming Authority</title>
+    
+    <!-- Security/SEO Headers (implement server-side):
+         X-Robots-Tag: noindex, nofollow
+         Content-Security-Policy: default-src 'self'; style-src 'unsafe-inline'; font-src 'self'
+         X-Content-Type-Options: nosniff
+         X-Frame-Options: DENY
+    -->
+    
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Self-hosted Inter font */
+        @font-face {
+            font-family: "Inter";
+            src: url("/fonts/Inter-Variable.woff2") format("woff2-variations");
+            font-weight: 100 900;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        /* Fallback font faces for static weights */
+        @font-face {
+            font-family: "Inter";
+            src: url("/fonts/Inter-Regular.woff2") format("woff2");
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "Inter";
+            src: url("/fonts/Inter-SemiBold.woff2") format("woff2");
+            font-weight: 600;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        body {
+            font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+            font-size: 15px;
+            line-height: 1.5;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        /* Government Banner */
+        .gov-banner {
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #ddd;
+            padding: 8px 0;
+            font-size: 13px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .gov-banner:hover {
+            background-color: #e8e8e8;
+        }
+
+        .gov-banner-content {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .gov-banner-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .gov-flag {
+            width: 20px;
+            height: 13px;
+            background: #4a90e2;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gov-flag::before {
+            content: '🌍';
+            font-size: 10px;
+            color: white;
+        }
+
+        .gov-text {
+            color: #666;
+        }
+
+        .gov-link {
+            color: #0066cc;
+            text-decoration: underline;
+        }
+
+        .gov-link::after {
+            content: ' ⌄';
+            font-size: 11px;
+        }
+
+        /* Expanded details */
+        .gov-details {
+            display: none;
+            background-color: #f8f8f8;
+            border-top: 1px solid #ddd;
+            padding: 15px 0;
+        }
+
+        .gov-details.expanded {
+            display: block;
+        }
+
+        .gov-details-content {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .gov-detail-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .gov-icon {
+            width: 24px;
+            height: 24px;
+            background-color: #2c4b77;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 12px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .gov-detail-text {
+            font-size: 12px;
+            line-height: 1.4;
+        }
+
+        .gov-detail-text strong {
+            display: block;
+            margin-bottom: 3px;
+            color: #333;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(to bottom, #2c4b77, #1f3555);
+            color: white;
+            padding: 20px;
+            position: relative;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-text h1 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .header-text .motto {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .seal {
+            width: 64px;
+            height: 64px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            text-align: center;
+            line-height: 1.2;
+        }
+
+        /* Navigation */
+        .nav {
+            background-color: #e6e6e6;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav li {
+            border-right: 1px solid #ccc;
+        }
+
+        .nav li:last-child {
+            border-right: none;
+        }
+
+        .nav a {
+            display: block;
+            padding: 12px 20px;
+            color: #1f3555;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+
+        .nav a:hover {
+            background-color: #d0d0d0;
+        }
+
+        .nav .active {
+            background-color: white;
+            font-weight: 600;
+        }
+
+        /* Main Content */
+        .main {
+            padding: 30px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1f3555;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #2c4b77;
+        }
+
+        .section p {
+            margin-bottom: 15px;
+            color: #444;
+        }
+
+        .announcements ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .announcements li {
+            padding: 8px 0;
+            border-bottom: 1px dotted #ccc;
+            color: #555;
+        }
+
+        .announcements li:last-child {
+            border-bottom: none;
+        }
+
+        .date {
+            font-weight: 600;
+            color: #1f3555;
+        }
+
+        .notice-box {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-left: 4px solid #2c4b77;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .links ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .links li {
+            margin-bottom: 8px;
+        }
+
+        .links a {
+            color: #0066cc;
+            text-decoration: underline;
+        }
+
+        .links a:hover {
+            color: #004499;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #f0f0f0;
+            border-top: 1px solid #ccc;
+            padding: 15px 30px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            .container {
+                margin: 0 10px;
+                max-width: calc(100% - 20px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .nav ul {
+                flex-wrap: wrap;
+            }
+
+            .nav li {
+                flex: 1;
+                min-width: 120px;
+                border-right: none;
+                border-bottom: 1px solid #ccc;
+            }
+
+            .gov-banner-content {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+
+            .gov-details-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .gov-detail-item {
+                min-width: auto;
+            }
+        }
+    </style>
+    
+    <script>
+        function toggleGovDetails() {
+            const details = document.getElementById('govDetails');
+            details.classList.toggle('expanded');
+        }
+    </script>
+</head>
+<body>
+    <!-- Government Banner -->
+    <div class="gov-banner" onclick="toggleGovDetails()">
+        <div class="gov-banner-content">
+            <div class="gov-banner-left">
+                <div class="gov-flag"></div>
+                <span class="gov-text">An official website of the United Nations</span>
+                <span class="gov-link">Here's how you know</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="gov-details" id="govDetails">
+        <div class="gov-details-content">
+            <div class="gov-detail-item">
+                <div class="gov-icon">🌐</div>
+                <div class="gov-detail-text">
+                    <strong>Official websites use *.int.nvos.dev</strong>
+                    A *.int.nvos.dev website belongs to an official UN organization.
+                </div>
+            </div>
+            <div class="gov-detail-item">
+                <div class="gov-icon">🔒</div>
+                <div class="gov-detail-text">
+                    <strong>Secure .gov websites use HTTPS</strong>
+                    A lock (🔒) or https:// means you've safely connected to the .gov website.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="header-text">
+                    <h1>Anarchy Network Naming Authority</h1>
+                    <div class="motto">Neutral Administrator of the .nvos.dev Top-Level Domain</div>
+                </div>
+                <div class="seal">
+                    ANNA<br>SEAL
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="nav">
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Charter</a></li>
+                <li><a href="#">Applications</a></li>
+                <li><a href="#">Security</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main">
+            <section class="section">
+                <h2>About ANNA</h2>
+                <p>The Anarchy Network Naming Authority (ANNA) serves as the neutral administrator of the .nvos.dev top-level domain, ensuring equitable access to domain registration services for all recognized sovereign entities, international organizations, and qualified applicants without discrimination based on political ideology, economic system, or territorial disputes.</p>
+                <p>Operating as an autonomous institution with strict political neutrality, ANNA maintains the technical infrastructure necessary for global domain resolution while establishing uniform standards for domain registration and management. Our commitment to transparency, technical independence, and operational security ensures the long-term stability of the root namespace.</p>
+            </section>
+
+            <section class="section announcements">
+                <h2>Official Notices</h2>
+                <ul>
+                    <li><span class="date">2025-03-15:</span> Security Protocol Update v2.1 - Enhanced infrastructure protection measures now active</li>
+                    <li><span class="date">2025-03-08:</span> Domain Registration Standards revised - Technical Advisory Council recommendations implemented</li>
+                    <li><span class="date">2025-02-28:</span> Quarterly compliance assessment report available - Administrative Authority findings published</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>Domain Registration Services</h2>
+                <div class="notice-box">
+                    <strong>Application Process:</strong> ANNA evaluates applications for second-level domains under .nvos.dev according to established criteria including entity legitimacy, technical capacity, security compliance, and operational stability requirements. All applications undergo standardized security screening and technical assessment by the Administrative Authority.
+                </div>
+                <p>Registration decisions are made with strict political neutrality, treating all qualified applicants equally regardless of governmental structure or international relations status. Complex applications requiring enhanced security review may necessitate extended evaluation periods as determined by operational requirements.</p>
+            </section>
+
+            <section class="section links">
+                <h2>Official Resources</h2>
+                <ul>
+                    <li><a href="#">ANNA Charter - Establishing Document and Governance Framework</a></li>
+                    <li><a href="#">Domain Registration Application Portal</a></li>
+                    <li><a href="#">Technical Advisory Council - Security and Infrastructure Guidance</a></li>
+                    <li><a href="#">Administrative Authority - Operational Procedures and Standards</a></li>
+                    <li><a href="#">Compliance Monitoring and Security Protocols</a></li>
+                    <li><a href="#">Appeal Process and Dispute Resolution</a></li>
+                </ul>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            © ANNA • Last updated: 2025-03-20 • Not indexed.<br>
+            <small style="color: #999; margin-top: 5px; display: block;">
+                This is a fictional website created for a Minecraft server. Not affiliated with any real government or UN organization.
+            </small>
+        </footer>
+    </div>
+</body>
+</html>
