@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="description" content="Apply for domain registration under .nvos.dev - Anarchy Network Naming Authority">
+    <meta name="author" content="ANNA">
+    <!-- NOTE: This is a fictional website for a Minecraft server. Not affiliated with any real government or UN organization. -->
+    <title>Domain Registration Applications - ANNA</title>
+    
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Self-hosted Inter font */
+        @font-face {
+            font-family: "Inter";
+            src: url("/fonts/Inter-Variable.woff2") format("woff2-variations");
+            font-weight: 100 900;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "Inter";
+            src: url("/fonts/Inter-Regular.woff2") format("woff2");
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "Inter";
+            src: url("/fonts/Inter-SemiBold.woff2") format("woff2");
+            font-weight: 600;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        body {
+            font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+            font-size: 15px;
+            line-height: 1.5;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        /* Government Banner */
+        .gov-banner {
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #ddd;
+            padding: 8px 0;
+            font-size: 13px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .gov-banner:hover {
+            background-color: #e8e8e8;
+        }
+
+        .gov-banner-content {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .gov-banner-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .gov-flag {
+            width: 20px;
+            height: 13px;
+            background: #4a90e2;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gov-flag::before {
+            content: '🌍';
+            font-size: 10px;
+            color: white;
+        }
+
+        .gov-text {
+            color: #666;
+        }
+
+        .gov-link {
+            color: #0066cc;
+            text-decoration: underline;
+        }
+
+        .gov-link::after {
+            content: ' ⌄';
+            font-size: 11px;
+        }
+
+        /* Expanded details */
+        .gov-details {
+            display: none;
+            background-color: #f8f8f8;
+            border-top: 1px solid #ddd;
+            padding: 15px 0;
+        }
+
+        .gov-details.expanded {
+            display: block;
+        }
+
+        .gov-details-content {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .gov-detail-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .gov-icon {
+            width: 24px;
+            height: 24px;
+            background-color: #2c4b77;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 12px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .gov-detail-text {
+            font-size: 12px;
+            line-height: 1.4;
+        }
+
+        .gov-detail-text strong {
+            display: block;
+            margin-bottom: 3px;
+            color: #333;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(to bottom, #2c4b77, #1f3555);
+            color: white;
+            padding: 20px;
+            position: relative;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-text h1 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .header-text .motto {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .seal {
+            width: 64px;
+            height: 64px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            text-align: center;
+            line-height: 1.2;
+        }
+
+        /* Navigation */
+        .nav {
+            background-color: #e6e6e6;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav li {
+            border-right: 1px solid #ccc;
+        }
+
+        .nav li:last-child {
+            border-right: none;
+        }
+
+        .nav a {
+            display: block;
+            padding: 12px 20px;
+            color: #1f3555;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+
+        .nav a:hover {
+            background-color: #d0d0d0;
+        }
+
+        .nav .active {
+            background-color: white;
+            font-weight: 600;
+        }
+
+        /* Main Content */
+        .main {
+            padding: 30px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1f3555;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #2c4b77;
+        }
+
+        .section p {
+            margin-bottom: 15px;
+            color: #444;
+        }
+
+        .section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .section li {
+            padding: 4px 0 4px 20px;
+            position: relative;
+            color: #555;
+        }
+
+        .section li::before {
+            content: "•";
+            color: #2c4b77;
+            position: absolute;
+            left: 0;
+        }
+
+        .notice-box {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-left: 4px solid #2c4b77;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .warning-box {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-left: 4px solid #f39c12;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        /* Form Styles */
+        .form-container {
+            background-color: #fafafa;
+            border: 1px solid #ddd;
+            padding: 30px;
+            margin-top: 20px;
+        }
+
+        .form-section {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .form-section:last-child {
+            border-bottom: none;
+        }
+
+        .form-section h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1f3555;
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+            margin-bottom: 0;
+        }
+
+        label {
+            display: block;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .required {
+            color: #e74c3c;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: inherit;
+            background-color: white;
+            transition: border-color 0.2s;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #2c4b77;
+            box-shadow: 0 0 0 2px rgba(44, 75, 119, 0.1);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            margin-top: 2px;
+        }
+
+        .checkbox-group label {
+            margin-bottom: 0;
+            flex: 1;
+        }
+
+        /* Submit Button */
+        .submit-section {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 2px solid #ddd;
+        }
+
+        .submit-btn {
+            background: linear-gradient(to bottom, #2c4b77, #1f3555);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .submit-btn:hover:not(:disabled) {
+            opacity: 0.9;
+        }
+
+        /* Status Messages */
+        .status-message {
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+            display: none;
+        }
+
+        .status-success {
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+
+        .status-error {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+        }
+
+        /* Turnstile Widget */
+        .turnstile-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #f0f0f0;
+            border-top: 1px solid #ccc;
+            padding: 15px 30px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .nav ul {
+                flex-wrap: wrap;
+            }
+
+            .nav li {
+                flex: 1;
+                min-width: 120px;
+                border-right: none;
+                border-bottom: 1px solid #ccc;
+            }
+
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .form-row .form-group {
+                margin-bottom: 20px;
+            }
+
+            .form-container {
+                padding: 20px;
+            }
+        }
+    </style>
+    
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    
+    <script>
+        function toggleGovDetails() {
+            const details = document.getElementById('govDetails');
+            details.classList.toggle('expanded');
+        }
+
+        function onTurnstileSuccess(token) {
+            console.log("Turnstile success:", token);
+            document.getElementById("submit-btn").disabled = false;
+        }
+
+        function onTurnstileError(errorCode) {
+            console.error("Turnstile error:", errorCode);
+            document.getElementById("submit-btn").disabled = true;
+            showMessage("Security verification failed. Please refresh the page and try again.", "error");
+        }
+
+        function onTurnstileExpired() {
+            console.warn("Turnstile token expired");
+            document.getElementById("submit-btn").disabled = true;
+            showMessage("Security verification expired. Please complete the verification again.", "error");
+        }
+
+        function showMessage(message, type) {
+            const messageEl = document.getElementById('status-message');
+            messageEl.textContent = message;
+            messageEl.className = `status-message status-${type}`;
+            messageEl.style.display = 'block';
+            messageEl.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        async function submitApplication(event) {
+            event.preventDefault();
+            
+            const submitBtn = document.getElementById('submit-btn');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Submitting...';
+            submitBtn.disabled = true;
+
+            try {
+                const formData = new FormData(event.target);
+                const turnstileResponse = formData.get('cf-turnstile-response');
+                
+                if (!turnstileResponse) {
+                    throw new Error('Security verification required');
+                }
+
+                // Prepare the application data
+                const applicationData = {
+                    // Entity Information
+                    entityName: formData.get('entity-name'),
+                    entityType: formData.get('entity-type'),
+                    requestedDomain: formData.get('requested-domain'),
+                    legalBasis: formData.get('legal-basis'),
+                    
+                    // Administrative Contact
+                    adminName: formData.get('admin-name'),
+                    adminTitle: formData.get('admin-title'),
+                    adminEmail: formData.get('admin-email'),
+                    adminPhone: formData.get('admin-phone'),
+                    
+                    // Technical Contact
+                    techName: formData.get('tech-name'),
+                    techEmail: formData.get('tech-email'),
+                    techPhone: formData.get('tech-phone'),
+                    
+                    // Technical Capacity
+                    dnsServers: formData.get('dns-servers'),
+                    securityProtocols: formData.get('security-protocols'),
+                    operationalCapacity: formData.get('operational-capacity'),
+                    
+                    // Additional Information
+                    additionalInfo: formData.get('additional-info'),
+                    
+                    // Declarations
+                    securityScreening: formData.get('security-screening') === 'on',
+                    backgroundCheck: formData.get('background-check') === 'on',
+                    operationalCommitment: formData.get('operational-commitment') === 'on',
+                    
+                    // Metadata
+                    submittedAt: new Date().toISOString(),
+                    userAgent: navigator.userAgent,
+                    turnstileToken: turnstileResponse
+                };
+
+                // Create Discord embed
+                const embed = {
+                    title: "🏛️ New ANNA Domain Registration Application",
+                    color: 0x2c4b77,
+                    timestamp: new Date().toISOString(),
+                    fields: [
+                        {
+                            name: "📋 Entity Information",
+                            value: `**Name:** ${applicationData.entityName}\n**Type:** ${applicationData.entityType}\n**Requested Domain:** ${applicationData.requestedDomain}.nvos.dev\n**Legal Basis:** ${applicationData.legalBasis}`,
+                            inline: false
+                        },
+                        {
+                            name: "👤 Administrative Contact",
+                            value: `**Name:** ${applicationData.adminName}\n**Title:** ${applicationData.adminTitle}\n**Email:** ${applicationData.adminEmail}\n**Phone:** ${applicationData.adminPhone || 'Not provided'}`,
+                            inline: true
+                        },
+                        {
+                            name: "🔧 Technical Contact",
+                            value: `**Name:** ${applicationData.techName}\n**Email:** ${applicationData.techEmail}\n**Phone:** ${applicationData.techPhone || 'Not provided'}`,
+                            inline: true
+                        },
+                        {
+                            name: "🛡️ Technical Capacity",
+                            value: `**DNS Servers:** ${applicationData.dnsServers || 'Not specified'}\n**Security Protocols:** ${applicationData.securityProtocols || 'Not specified'}`,
+                            inline: false
+                        },
+                        {
+                            name: "✅ Declarations",
+                            value: `Security Screening Consent: ${applicationData.securityScreening ? '✅' : '❌'}\nBackground Check Authorization: ${applicationData.backgroundCheck ? '✅' : '❌'}\nOperational Commitment: ${applicationData.operationalCommitment ? '✅' : '❌'}`,
+                            inline: false
+                        }
+                    ],
+                    footer: {
+                        text: "ANNA Domain Registration System",
+                        icon_url: "https://cdn.discordapp.com/attachments/your-icon-url.png"
+                    }
+                };
+
+                if (applicationData.operationalCapacity) {
+                    embed.fields.push({
+                        name: "📊 Operational Capacity",
+                        value: applicationData.operationalCapacity.substring(0, 1024),
+                        inline: false
+                    });
+                }
+
+                if (applicationData.additionalInfo) {
+                    embed.fields.push({
+                        name: "📝 Additional Information",
+                        value: applicationData.additionalInfo.substring(0, 1024),
+                        inline: false
+                    });
+                }
+
+                // Replace with your actual Discord webhook URL
+                const webhookUrl = 'YOUR_DISCORD_WEBHOOK_URL_HERE';
+                
+                const response = await fetch(webhookUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        content: `📨 **New Domain Registration Application Received**\n\n**Entity:** ${applicationData.entityName}\n**Requested Domain:** ${applicationData.requestedDomain}.nvos.dev`,
+                        embeds: [embed]
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                showMessage('Application submitted successfully! Your request has been received and will be reviewed by the Administrative Authority. You will be contacted within 30 business days regarding the status of your application.', 'success');
+                
+                // Reset form
+                event.target.reset();
+                // Reset Turnstile
+                turnstile.reset();
+                submitBtn.disabled = true;
+
+            } catch (error) {
+                console.error('Submission error:', error);
+                showMessage('Application submission failed. Please check your internet connection and try again. If the problem persists, contact the Administrative Authority directly.', 'error');
+            } finally {
+                submitBtn.textContent = originalText;
+                if (!document.querySelector('.cf-turnstile input').value) {
+                    submitBtn.disabled = true;
+                }
+            }
+        }
+
+        // Form validation
+        document.addEventListener('DOMContentLoaded', function() {
+            const requiredFields = document.querySelectorAll('input[required], select[required], textarea[required]');
+            const submitBtn = document.getElementById('submit-btn');
+            
+            function validateForm() {
+                const allValid = Array.from(requiredFields).every(field => field.value.trim() !== '');
+                const turnstileValid = document.querySelector('.cf-turnstile input')?.value;
+                submitBtn.disabled = !allValid || !turnstileValid;
+            }
+            
+            requiredFields.forEach(field => {
+                field.addEventListener('input', validateForm);
+                field.addEventListener('change', validateForm);
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- Government Banner -->
+    <div class="gov-banner" onclick="toggleGovDetails()">
+        <div class="gov-banner-content">
+            <div class="gov-banner-left">
+                <div class="gov-flag"></div>
+                <span class="gov-text">An official website of the United Nations</span>
+                <span class="gov-link">Here's how you know</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="gov-details" id="govDetails">
+        <div class="gov-details-content">
+            <div class="gov-detail-item">
+                <div class="gov-icon">🌐</div>
+                <div class="gov-detail-text">
+                    <strong>Official websites use *.int.nvos.dev</strong>
+                    A *.int.nvos.dev website belongs to an official UN organization.
+                </div>
+            </div>
+            <div class="gov-detail-item">
+                <div class="gov-icon">🔒</div>
+                <div class="gov-detail-text">
+                    <strong>Secure .gov websites use HTTPS</strong>
+                    A lock (🔒) or https:// means you've safely connected to the .gov website.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="header-text">
+                    <h1>Anarchy Network Naming Authority</h1>
+                    <div class="motto">Neutral Administrator of the .nvos.dev Top-Level Domain</div>
+                </div>
+                <div class="seal">
+                    ANNA<br>SEAL
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="charter.html">Charter</a></li>
+                <li><a href="applications.html" class="active">Applications</a></li>
+                <li><a href="security.html">Security</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main">
+            <section class="section">
+                <h2>Domain Registration Applications</h2>
+                <p>The Anarchy Network Naming Authority (ANNA) evaluates applications for second-level domains under .nvos.dev according to established criteria set forth in Article IV of the ANNA Charter. All applications undergo standardized security screening and technical assessment by the Administrative Authority.</p>
+                
+                <div class="notice-box">
+                    <strong>Important Notice:</strong> ANNA maintains strict political neutrality in all domain registration decisions, treating all qualified applicants equally regardless of governmental structure, economic policies, or international relations status. Registration decisions are based solely on the criteria outlined below and technical merit.
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Eligibility Criteria</h2>
+                <p>Applications are evaluated based on the following criteria as established in Charter Article IV, Section 4.2:</p>
+                <ul>
+                    <li><strong>Legitimacy of the applying entity</strong> - Recognized sovereign entities, international organizations, and qualified applicants</li>
+                    <li><strong>Technical capacity</strong> - Ability to maintain proper domain administration and DNS infrastructure</li>
+                    <li><strong>Security compliance</strong> - Adherence to established security protocols and operational standards</li>
+                    <li><strong>No conflicts</strong> - Absence of conflicts with existing registrations or reserved names</li>
+                    <li><strong>Operational stability</strong> - Demonstrated commitment to maintaining reliable services</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>Application Process</h2>
+                <p>The registration process follows these steps:</p>
+                <ul>
+                    <li><strong>Application Submission</strong> - Complete the form below with all required information</li>
+                    <li><strong>Security Screening</strong> - Administrative Authority conducts preliminary security assessment</li>
+                    <li><strong>Technical Review</strong> - Technical Advisory Council evaluates technical capacity and requirements</li>
+                    <li><strong>Decision</strong> - Administrative Authority renders final decision based on all criteria</li>
+                    <li><strong>Implementation</strong> - Approved domains are implemented within 14 business days</li>
+                </ul>
+                
+                <div class="warning-box">
+                    <strong>Review Timeline:</strong> Standard applications are processed within 30 business days. Complex applications requiring enhanced security review, technical assessment, or coordination with operational partners may require extended evaluation periods as determined by the Administrative Authority.
+                </div>
+            </section>
+
+            <!-- Application Form -->
+            <div class="form-container">
+                <h2 style="color: #1f3555; margin-bottom: 20px;">Domain Registration Application Form</h2>
+                
+                <div id="status-message" class="status-message"></div>
+                
+                <form id="application-form" onsubmit="submitApplication(event)">
+                    <!-- Entity Information -->
+                    <div class="form-section">
+                        <h3>Entity Information</h3>
+                        
+                        <div class="form-group">
+                            <label for="entity-name">Entity Name <span class="required">*</span></label>
+                            <input type="text" id="entity-name" name="entity-name" required 
+                                   placeholder="Full legal name of the applying entity">
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="entity-type">Entity Type <span class="required">*</span></label>
+                                <select id="entity-type" name="entity-type" required>
+                                    <option value="">Select entity type...</option>
+                                    <option value="sovereign-nation">Sovereign Nation</option>
+                                    <option value="international-org">International Organization</option>
+                                    <option value="autonomous-region">Autonomous Region</option>
+                                    <option value="special-territory">Special Administrative Territory</option>
+                                    <option value="qualified-entity">Other Qualified Entity</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="requested-domain">Requested Domain <span class="required">*</span></label>
+                                <div style="display: flex; align-items: center;">
+                                    <input type="text" id="requested-domain" name="requested-domain" required 
+                                           placeholder="example" style="flex: 1;">
+                                    <span style="margin-left: 5px; color: #666;">.nvos.dev</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="legal-basis">Legal/Constitutional Basis for Authority <span class="required">*</span></label>
+                            <textarea id="legal-basis" name="legal-basis" required
+                                      placeholder="Describe the legal or constitutional authority under which your entity operates and claims domain registration rights"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Administrative Contact -->
+                    <div class="form-section">
+                        <h3>Administrative Contact</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="admin-name">Contact Name <span class="required">*</span></label>
+                                <input type="text" id="admin-name" name="admin-name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="admin-title">Title/Position <span class="required">*</span></label>
+                                <input type="text" id="admin-title" name="admin-title" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="admin-email">Email Address <span class="required">*</span></label>
+                                <input type="email" id="admin-email" name="admin-email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="admin-phone">Phone Number</label>
+                                <input type="tel" id="admin-phone" name="admin-phone">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technical Contact -->
+                    <div class="form-section">
+                        <h3>Technical Contact</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="tech-name">Technical Contact Name <span class="required">*</span></label>
+                                <input type="text" id="tech-name" name="tech-name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="tech-email">Technical Email <span class="required">*</span></label>
+                                <input type="email" id="tech-email" name="tech-email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="tech-phone">Technical Phone Number</label>
+                            <input type="tel" id="tech-phone" name="tech-phone">
+                        </div>
+                    </div>
+
+                    <!-- Technical Capacity -->
+                    <div class="form-section">
+                        <h3>Technical Capacity Assessment</h3>
+                        
+                        <div class="form-group">
+                            <label for="dns-servers">Primary DNS Servers</label>
+                            <textarea id="dns-servers" name="dns-servers"
+                                      placeholder="List your primary and secondary DNS servers (e.g., ns1.example.com, ns2.example.com)"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="security-protocols">Security Protocols and Compliance <span class="required">*</span></label>
+                            <textarea id="security-protocols" name="security-protocols" required
+                                      placeholder="Describe your security protocols, compliance frameworks, and measures for protecting domain infrastructure"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="operational-capacity">Operational Capacity Demonstration <span class="required">*</span></label>
+                            <textarea id="operational-capacity" name="operational-capacity" required
+                                      placeholder="Describe your technical team, infrastructure, and capacity to maintain reliable domain services 24/7"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Additional Information -->
+                    <div class="form-section">
+                        <h3>Additional Information</h3>
+                        
+                        <div class="form-group">
+                            <label for="additional-info">Additional Information</label>
+                            <textarea id="additional-info" name="additional-info"
+                                      placeholder="Any additional information that supports your application or addresses specific requirements"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Declarations and Consent -->
+                    <div class="form-section">
+                        <h3>Required Declarations</h3>
+                        
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="security-screening" name="security-screening" required>
+                            <label for="security-screening">
+                                <strong>Security Screening Consent <span class="required">*</span></strong><br>
+                                I consent to security screening and background verification as required by ANNA Charter Article VI. I understand that this may include verification of entity credentials, technical infrastructure assessment, and coordination with relevant security authorities.
+                            </label>
+                        </div>
+                        
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="background-check" name="background-check" required>
+                            <label for="background-check">
+                                <strong>Background Check Authorization <span class="required">*</span></strong><br>
+                                I authorize ANNA to conduct background checks on key personnel and verify the legitimacy of the applying entity through appropriate channels, including consultation with international databases and verification services.
+                            </label>
+                        </div>
+                        
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="operational-commitment" name="operational-commitment" required>
+                            <label for="operational-commitment">
+                                <strong>Operational Stability Commitment <span class="required">*</span></strong><br>
+                                I commit to maintaining operational stability, complying with evolving security requirements, and cooperating with legitimate security investigations as outlined in ANNA Charter Articles V and VI. I understand that failure to maintain these commitments may result in domain suspension or revocation.
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Security Verification -->
+                    <div class="form-section">
+                        <h3>Security Verification</h3>
+                        <p style="margin-bottom: 15px; color: #666;">Complete the security verification below to submit your application.</p>
+                        
+                        <div class="turnstile-container">
+                            <div class="cf-turnstile" 
+                                 data-sitekey="0x4AAAAAAB1bMGkxcZ8HTEeO"
+                                 data-theme="light"
+                                 data-size="normal"
+                                 data-callback="onTurnstileSuccess"
+                                 data-error-callback="onTurnstileError"
+                                 data-expired-callback="onTurnstileExpired">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Submit Section -->
+                    <div class="submit-section">
+                        <button type="submit" id="submit-btn" class="submit-btn" disabled>
+                            Submit Application for Review
+                        </button>
+                        <p style="margin-top: 15px; color: #666; font-size: 13px;">
+                            By submitting this application, you certify that all information provided is accurate and complete. 
+                            False or misleading information may result in application denial and potential security measures.
+                        </p>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Appeal Process -->
+            <section class="section">
+                <h2>Appeal Process</h2>
+                <p>Applicants may request reconsideration of negative decisions through established channels as outlined in Charter Article IV, Section 4.4. To initiate an appeal:</p>
+                <ul>
+                    <li>Submit written appeal within 30 days of decision notification</li>
+                    <li>Provide additional supporting documentation addressing denial reasons</li>
+                    <li>Include any technical improvements or policy compliance measures implemented</li>
+                    <li>Appeals are reviewed by the Technical Advisory Council in consultation with the Administrative Authority</li>
+                </ul>
+                
+                <div class="notice-box">
+                    <strong>Final Authority:</strong> Final determinations on matters involving technical security, infrastructure stability, or operational requirements rest with the Administrative Authority as established in Charter Article IV, Section 4.4.
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            © ANNA • Last updated: 2025-03-20 • Not indexed.<br>
+            <small style="color: #999; margin-top: 5px; display: block;">
+                This is a fictional website created for a Minecraft server. Not affiliated with any real government or UN organization.
+            </small>
+        </footer>
+    </div>
+</body>
+</html>
